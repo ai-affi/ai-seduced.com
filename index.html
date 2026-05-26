@@ -812,6 +812,48 @@
       border-radius: 6px;
     }
 
+    /* ===== LANGUAGE SELECTOR ===== */
+    .lang-selector {
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      margin-bottom: 24px;
+    }
+    .lang-selector h5 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-primary);
+      margin-bottom: 14px;
+    }
+    .lang-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .lang-grid a {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      font-size: 0.82rem;
+      font-weight: 500;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+    .lang-grid a:hover {
+      border-color: var(--accent-pink);
+      color: var(--text-primary);
+      background: rgba(200,16,46,0.08);
+    }
+    .lang-grid a.active {
+      background: var(--gradient-cta);
+      color: #fff;
+      border-color: transparent;
+      font-weight: 600;
+    }
+
     @media (max-width: 900px) {
       .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
     }
@@ -1551,7 +1593,7 @@
             <li><a href="https://ai-swipey.net" rel="nofollow">AI Swipey</a></li>
             <li><a href="https://ai-nudify.net" rel="nofollow">AI Nudify</a></li>
             <li><a href="https://ai-soulgen.com" rel="nofollow">AI SoulGen</a></li>
-            <li><a href="https://candy-ai-porn.com" rel="nofollow">Candy AI Porn Porn</a></li>
+            <li><a href="https://candy-ai-porn.com" rel="nofollow">Candy AI Porn</a></li>
           </ul>
         </div>
 
@@ -1564,6 +1606,25 @@
           </ul>
         </div>
 
+      </div>
+
+      <div class="lang-selector">
+        <h5>🌍 Languages</h5>
+        <div class="lang-grid">
+          <a href="/" class="active" rel="alternate" hreflang="en">🇺🇸 English</a>
+          <a href="/de/" rel="alternate" hreflang="de">🇩🇪 Deutsch</a>
+          <a href="/es/" rel="alternate" hreflang="es">🇪🇸 Español</a>
+          <a href="/fr/" rel="alternate" hreflang="fr">🇫🇷 Français</a>
+          <a href="/hi/" rel="alternate" hreflang="hi">🇮🇳 हिन्दी</a>
+          <a href="/it/" rel="alternate" hreflang="it">🇮🇹 Italiano</a>
+          <a href="/ja/" rel="alternate" hreflang="ja">🇯🇵 日本語</a>
+          <a href="/kr/" rel="alternate" hreflang="ko">🇰🇷 한국어</a>
+          <a href="/nl/" rel="alternate" hreflang="nl">🇳🇱 Nederlands</a>
+          <a href="/pl/" rel="alternate" hreflang="pl">🇵🇱 Polski</a>
+          <a href="/pt/" rel="alternate" hreflang="pt">🇵🇹 Português</a>
+          <a href="/ru/" rel="alternate" hreflang="ru">🇷🇺 Русский</a>
+          <a href="/tr/" rel="alternate" hreflang="tr">🇹🇷 Türkçe</a>
+        </div>
       </div>
 
       <div class="footer-bottom">
