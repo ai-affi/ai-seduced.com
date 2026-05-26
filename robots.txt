@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /privacy/
+Disallow: /terms/
+Disallow: /affiliate-disclosure/
+Sitemap: https://ai-seduced.com/sitemap.xml
