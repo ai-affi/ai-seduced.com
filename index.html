@@ -417,6 +417,12 @@
       grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
       gap: 20px;
     }
+    .models-grid-2x3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, auto);
+      gap: 20px;
+    }
     .model-card {
       position: relative;
       border-radius: var(--radius);
@@ -432,7 +438,7 @@
     .model-card img,
     .model-card video {
       width: 100%;
-      height: 260px;
+      height: 320px;
       object-fit: cover;
       display: block;
     }
@@ -466,6 +472,17 @@
       padding: 3px 10px;
       border-radius: 50px;
       letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 768px) {
+      .models-grid-2x3 {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+      }
+      .model-card img,
+      .model-card video {
+        height: 280px;
+      }
     }
 
     /* ===== WHY US ===== */
@@ -954,6 +971,82 @@
     </div>
   </section>
 
+  <!-- ===== MODELS ===== -->
+  <section id="models" style="padding: 48px 0 64px; background: var(--bg-section);">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: 8px;">Choose Your Model</h2>
+      <p class="section-subtitle" style="margin-bottom: 40px;">6 stunning AI personalities. Click any to start generating.</p>
+
+      <div class="models-grid models-grid-2x3">
+
+        <div class="model-card" onclick="goToOffer('women')">
+          <span class="model-badge">BLOND</span>
+          <img src="images/model-daniela.webp" alt="Daniela - Blond AI model" loading="lazy"
+               onerror="this.style.background='linear-gradient(135deg,#1a0510,#2d0a1a)';this.style.display='block';">
+          <div class="model-card-overlay">
+            <div class="model-card-title">Daniela</div>
+            <div class="model-card-desc">Blond · Photoreal · Seductive poses</div>
+          </div>
+        </div>
+
+        <div class="model-card" onclick="goToOffer('women')">
+          <span class="model-badge">ASIAN</span>
+          <img src="images/model-jacklin.webp" alt="Jacklin - Asian AI model" loading="lazy"
+               onerror="this.style.background='linear-gradient(135deg,#0a1520,#1a2d40)';this.style.display='block';">
+          <div class="model-card-overlay">
+            <div class="model-card-title">Jacklin</div>
+            <div class="model-card-desc">Asian · Realistic · Intimate scenes</div>
+          </div>
+        </div>
+
+        <div class="model-card" onclick="goToOffer('women')">
+          <span class="model-badge">LATINA</span>
+          <img src="images/model-luisa.webp" alt="Luisa - Latina AI model" loading="lazy"
+               onerror="this.style.background='linear-gradient(135deg,#0a1510,#1a2d1a)';this.style.display='block';">
+          <div class="model-card-overlay">
+            <div class="model-card-title">Luisa</div>
+            <div class="model-card-desc">Latina · HD · Passionate energy</div>
+          </div>
+        </div>
+
+        <div class="model-card" onclick="goToOffer('women')">
+          <span class="model-badge">BLOND</span>
+          <img src="images/model-samantha.webp" alt="Samantha - Blond AI model" loading="lazy"
+               onerror="this.style.background='linear-gradient(135deg,#150a20,#2d1a40)';this.style.display='block';">
+          <div class="model-card-overlay">
+            <div class="model-card-title">Samantha</div>
+            <div class="model-card-desc">Blond · Cinematic · Alluring gaze</div>
+          </div>
+        </div>
+
+        <div class="model-card" onclick="goToOffer('women')">
+          <span class="model-badge">EBONY</span>
+          <img src="images/model-jenna.webp" alt="Jenna - Black AI model" loading="lazy"
+               onerror="this.style.background='linear-gradient(135deg,#1a1500,#2d2a00)';this.style.display='block';">
+          <div class="model-card-overlay">
+            <div class="model-card-title">Jenna</div>
+            <div class="model-card-desc">Black · Photoreal · Bold curves</div>
+          </div>
+        </div>
+
+        <div class="model-card" onclick="goToOffer('anime')">
+          <span class="model-badge">🔥 HENTAI</span>
+          <video autoplay muted loop playsinline
+            style="width:100%;height:260px;object-fit:cover;display:block;"
+            poster="images/model-jacklin.webp"
+          >
+            <source src="images/video-hentai-kissing.mp4" type="video/mp4">
+          </video>
+          <div class="model-card-overlay">
+            <div class="model-card-title">Hentai Girls</div>
+            <div class="model-card-desc">Anime · Yuri · 2 girls kissing</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ===== FEATURES ===== -->
   <section id="features">
     <div class="container">
@@ -1033,86 +1126,6 @@
 
       <div class="text-center mt-32">
         <button class="btn-primary" data-open-modal>🚀 Start Generating Now — It's Free</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== MODELS ===== -->
-  <section id="models">
-    <div class="container">
-      <h2 class="section-title">AI Models</h2>
-      <p class="section-subtitle">30+ specialized models. Photorealistic, anime, hentai, fantasy, 3D.</p>
-
-      <div class="models-grid">
-
-        <div class="model-card" onclick="goToOffer('women')">
-          <span class="model-badge">BLOND</span>
-          <img src="images/model-daniela.webp" alt="Daniela - Blond AI model" loading="lazy"
-               onerror="this.style.background='linear-gradient(135deg,#1a0510,#2d0a1a)';this.style.display='block';">
-          <div class="model-card-overlay">
-            <div class="model-card-title">Daniela</div>
-            <div class="model-card-desc">Blond · Photoreal · Seductive poses</div>
-          </div>
-        </div>
-
-        <div class="model-card" onclick="goToOffer('women')">
-          <span class="model-badge">ASIAN</span>
-          <img src="images/model-jacklin.webp" alt="Jacklin - Asian AI model" loading="lazy"
-               onerror="this.style.background='linear-gradient(135deg,#0a1520,#1a2d40)';this.style.display='block';">
-          <div class="model-card-overlay">
-            <div class="model-card-title">Jacklin</div>
-            <div class="model-card-desc">Asian · Realistic · Intimate scenes</div>
-          </div>
-        </div>
-
-        <div class="model-card" onclick="goToOffer('women')">
-          <span class="model-badge">LATINA</span>
-          <img src="images/model-luisa.webp" alt="Luisa - Latina AI model" loading="lazy"
-               onerror="this.style.background='linear-gradient(135deg,#0a1510,#1a2d1a)';this.style.display='block';">
-          <div class="model-card-overlay">
-            <div class="model-card-title">Luisa</div>
-            <div class="model-card-desc">Latina · HD · Passionate energy</div>
-          </div>
-        </div>
-
-        <div class="model-card" onclick="goToOffer('women')">
-          <span class="model-badge">BLOND</span>
-          <img src="images/model-samantha.webp" alt="Samantha - Blond AI model" loading="lazy"
-               onerror="this.style.background='linear-gradient(135deg,#150a20,#2d1a40)';this.style.display='block';">
-          <div class="model-card-overlay">
-            <div class="model-card-title">Samantha</div>
-            <div class="model-card-desc">Blond · Cinematic · Alluring gaze</div>
-          </div>
-        </div>
-
-        <div class="model-card" onclick="goToOffer('women')">
-          <span class="model-badge">EBONY</span>
-          <img src="images/model-jenna.webp" alt="Jenna - Black AI model" loading="lazy"
-               onerror="this.style.background='linear-gradient(135deg,#1a1500,#2d2a00)';this.style.display='block';">
-          <div class="model-card-overlay">
-            <div class="model-card-title">Jenna</div>
-            <div class="model-card-desc">Black · Photoreal · Bold curves</div>
-          </div>
-        </div>
-
-        <div class="model-card" onclick="goToOffer('anime')">
-          <span class="model-badge">🔥 HENTAI</span>
-          <video autoplay muted loop playsinline
-            style="width:100%;height:260px;object-fit:cover;display:block;"
-            poster="images/model-jacklin.webp"
-          >
-            <source src="images/video-hentai-kissing.mp4" type="video/mp4">
-          </video>
-          <div class="model-card-overlay">
-            <div class="model-card-title">Hentai Girls</div>
-            <div class="model-card-desc">Anime · Yuri · 2 girls kissing</div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="text-center mt-32">
-        <button class="btn-primary" data-open-modal>🎭 Explore All Models Free</button>
       </div>
     </div>
   </section>
